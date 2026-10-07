@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Pão Quentinho - Artesanal & Deliciosa</title>
+    
+    <style>
+        /* Reset e Fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+            /* Fundo com padronagem da imagem de pão reduzida e repetida */
+            background-image: url('https://static.vecteezy.com/system/resources/previews/045/054/941/non_2x/assorted-fresh-bread-in-a-wicker-basket-png.png');
+            background-size: 130px; /* Reduz o tamanho da imagem no fundo */
+            background-repeat: repeat; /* Espalha pelo fundo */
+            background-blend-mode: overlay; /* Suaviza a imagem com a cor de fundo */
+            transition: background-color 0.5s ease; /* Transição suave de cor */
+        }
+
+        /* Cabeçalho / Navegação */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #8B4513;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #D2691E;
+        }
+
+        /* Seção Principal / Hero */
+        .hero {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.92);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: #5C2C0C;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #D2691E;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 12px rgba(210, 105, 30, 0.3);
+        }
+
+        .cta-btn:hover {
+            background-color: #A0522D;
+            transform: translateY(-2px);
+        }
+
+        /* Vitrine de Links/Serviços */
+        .features {
+            max-width: 1100px;
+            margin: 20px auto 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            color: #D2691E;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: auto;
+            background-color: #3E2723;
+            color: #D7CCC8;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #FFCC80;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <a href="#" class="logo">🥖 Padaria Pão Quentinho</a>
+            <ul class="nav-links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Encomendas</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="hero">
+            <h1>Sabor & Tradição Todos os Dias</h1>
+            <p>Pães artesanais, bolos caseiros e os melhores cafés da região feitos com ingredientes selecionados e muito carinho.</p>
+            <a href="#" class="cta-btn">Faça seu Pedido</a>
+        </section>
+
+        <!-- Cards com Links Fictícios -->
+        <section class="features">
+            <div class="card">
+                <h3>🍞 Pães Especiais</h3>
+                <p>Fermentação natural, baguetes, pão francês quentinho e integrais.</p>
+                <a href="#">Ver Catálogo &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>🍰 Confeitaria</h3>
+                <p>Bolos fofinhos, tortas doces, sonho e carolinas fresquinhas.</p>
+                <a href="#">Encomendar Bolo &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>☕ Cafeteria</h3>
+                <p>Espressos, cappuccino, e bebidas quentes para acompanhar.</p>
+                <a href="#">Menu de Cafés &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>🥐 Salgados</h3>
+                <p>Croissants, empadas, coxinhas e folhados recheados.</p>
+                <a href="#">Ver Opções &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Padaria Pão Quentinho - Todos os direitos reservados.</p>
+        <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a> | <a href="#">Trabalhe Conosco</a></p>
+    </footer>
+
+    <!-- Script para gerar uma cor de fundo pastel aleatória -->
+    <script>
+        const coresPastel = [
+            '#FFF8DC', // Cornsilk
+            '#FFE4C4', // Bisque
+            '#FFDAB9', // PeachPuff
+            '#F5F5DC', // Beige
+            '#FFF5EE', // Seashell
+            '#FAF0E6', // Linen
+            '#FFE4E1'  // MistyRose
+        ];
+
+        // Sorteia uma cor da lista
+        const corSorteada = coresPastel[Math.floor(Math.random() * coresPastel.length)];
+        
+        // Aplica no body junto com o blend mode
+        document.body.style.backgroundColor = corSorteada;
+    </script>
+</body>
+</html>
